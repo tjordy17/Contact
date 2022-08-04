@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--contact form using only html and external form submitions-->
+    <!--following opensource NO PHP or back end code required-->
+    <!--https://formsubmit.co/-->
+    <form action="https://formsubmit.co/tjordynd17@gmail.com" method="POST">
+        <!--Subject object for new query-->
+        <input type="hidden" name="_subject" value="New Message!">
+        <!--Cc the Message-->
+        <input type="hidden" name="_cc" value="another@email.com">
+        <!--
+        If you want to CC multiple email addresses, then just make it a list of email addresses separate by commas.
+        <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com">-->
+        <!--domain to be entered to my personal site-->
+        <!--Link to Submissiono page-->
+        <input type="hidden" name="_next" value="https://yourdomain.co/external.html">
+        <input type="text" name="name" placeholder="name" required >
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="date" name="date"  placeholder="dOB" required>
+        <input type="tel" name="tel" placeholder="phone" required>
+        <input type="password" name="password" placeholder="password">
+        <!--
+            _honey
+        Add this "honeypot" field to avoid spam by fooling scrapers. If a value is provided, the submission will be silently 
+        ignored. The input should be hidden with CSS.
+        All forms come with reCAPTCHA, which uses advanced machine learning techniques to distinguish between humans and bots, 
+            so for most forms this isn't necessary
+        -->
+        <input type="text" name="_honey" style="display:none">
+        <button type="submit">Send</button>
+        <!--customer User Response Message-->
+        <input type="hidden" name="_autoresponse" value="Thank you for the ">
+   </form>
+</body>
+</html>
